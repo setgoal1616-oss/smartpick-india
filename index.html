@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SmartPick India - Best Smartphones & Deals</title>
+    <title>SmartPick India | Best Smartphones & Deals</title>
 
-    <meta name="description" content="Find the latest smartphone deals, buying guides, reviews and comparisons in India.">
+    <meta name="description" content="Find the latest smartphones, prices, features, buying guides and deals in India.">
 
     <style>
         * {
@@ -16,8 +16,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
             color: #222;
             line-height: 1.6;
         }
@@ -25,55 +25,65 @@
         header {
             background: #111827;
             color: white;
-            padding: 25px 20px;
             text-align: center;
+            padding: 28px 15px;
         }
 
         header h1 {
             font-size: 32px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         header p {
             color: #d1d5db;
+            font-size: 15px;
         }
 
         nav {
             background: white;
-            padding: 14px;
+            padding: 14px 10px;
             text-align: center;
             border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav a {
             color: #111827;
             text-decoration: none;
-            margin: 0 10px;
             font-weight: bold;
+            margin: 0 8px;
+            font-size: 14px;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 30px 20px;
+            padding: 25px 15px;
         }
 
         .hero {
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             color: white;
-            padding: 45px 30px;
-            border-radius: 15px;
+            padding: 40px 25px;
+            border-radius: 16px;
             margin-bottom: 30px;
         }
 
         .hero h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            max-width: 700px;
         }
 
         .section-title {
-            margin: 30px 0 15px;
             font-size: 25px;
+            margin: 30px 0 18px;
         }
 
         .grid {
@@ -84,57 +94,125 @@
 
         .card {
             background: white;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            padding-bottom: 20px;
+        }
+
+        .phone-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background: #ffffff;
+            padding: 15px;
+            display: block;
+        }
+
+        .card-content {
+            padding: 18px;
         }
 
         .card h3 {
+            font-size: 20px;
             margin-bottom: 10px;
             color: #111827;
         }
 
-        .price {
-            font-size: 22px;
-            font-weight: bold;
-            color: #16a34a;
+        .description {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .features {
             margin: 12px 0;
+            padding-left: 20px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #16a34a;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        .note {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
 
         .button {
             display: inline-block;
             background: #2563eb;
             color: white;
-            padding: 10px 16px;
-            border-radius: 7px;
+            padding: 11px 17px;
+            border-radius: 8px;
             text-decoration: none;
-            margin-top: 10px;
+            font-weight: bold;
+            margin-top: 8px;
         }
 
         .button:hover {
             background: #1d4ed8;
         }
 
+        .guide-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .guide-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background: #fff;
+            border-left: 5px solid #2563eb;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
         footer {
             background: #111827;
-            color: white;
+            color: #d1d5db;
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px 15px;
             margin-top: 40px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 6px 0;
         }
 
         @media (max-width: 600px) {
+
             header h1 {
-                font-size: 26px;
+                font-size: 27px;
             }
 
             .hero h2 {
                 font-size: 25px;
             }
 
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .phone-image {
+                height: 230px;
+            }
+
             nav a {
                 display: inline-block;
-                margin: 5px;
+                margin: 4px 5px;
             }
         }
     </style>
@@ -151,18 +229,19 @@
     <a href="#">Home</a>
     <a href="#under20k">Under ₹20K</a>
     <a href="#5g">5G Phones</a>
-    <a href="#deals">Deals</a>
+    <a href="#guides">Buying Guides</a>
 </nav>
 
-<div class="container">
+<main class="container">
 
     <section class="hero">
         <h2>Find Your Next Smartphone</h2>
         <p>
-            Discover smartphone deals, useful buying guides,
-            specifications and comparisons for Indian buyers.
+            Discover popular smartphones, useful features,
+            buying guides and current deals for Indian buyers.
         </p>
     </section>
+
 
     <h2 class="section-title" id="under20k">
         Top Smartphones Under ₹20,000
@@ -170,72 +249,195 @@
 
     <div class="grid">
 
-        <div class="card">
-            <h3>CMF by Nothing Phone 2 Pro</h3>
+        <!-- CMF PHONE -->
 
-            <p>
-                A stylish smartphone with a clean software
-                experience and versatile camera setup.
-            </p>
+        <article class="card">
 
-            <div class="price">₹18,999*</div>
+            <img
+                src="images/cmf-phone-2-pro.jpg"
+                alt="CMF by Nothing Phone 2 Pro"
+                class="phone-image"
+            >
 
-            <a class="button" href="#">
-                Check Latest Price
-            </a>
-        </div>
+            <div class="card-content">
 
+                <h3>CMF by Nothing Phone 2 Pro</h3>
 
-        <div class="card">
-            <h3>Realme P4x 5G</h3>
+                <p class="description">
+                    Features an optimized software experience
+                    running Android 15 with Nothing OS and a
+                    versatile triple-camera setup.
+                </p>
 
-            <p>
-                A 5G smartphone focused on battery life,
-                everyday performance and multitasking.
-            </p>
+                <ul class="features">
+                    <li>Android 15 with Nothing OS</li>
+                    <li>Android 16 upgrade support</li>
+                    <li>Triple-camera setup</li>
+                    <li>Modern design</li>
+                </ul>
 
-            <div class="price">Check Current Price</div>
+                <div class="price">₹18,999*</div>
 
-           <a class="button" href="https://link.amazon/B01xCPeMv" target="_blank" rel="nofollow sponsored">
-    Check Latest Price
-</a>
-        </div>
+                <p class="note">
+                    Price may change. Check the latest price before buying.
+                </p>
 
+                <a
+                    class="button"
+                    href="#"
+                    target="_blank"
+                    rel="nofollow sponsored"
+                >
+                    Check Latest Price
+                </a>
 
-        <div class="card">
-            <h3>Samsung Galaxy A35 5G</h3>
-
-            <p>
-                Features a refined camera system, durable
-                build and Samsung's software experience.
-            </p>
-
-            <div class="price">Check Current Price</div>
-
-            <a class="button" href="#">
-                Check Latest Price
-            </a>
-        </div>
+            </div>
+        </article>
 
 
-       <div class="card">
+        <!-- REALME P4X -->
 
-    <img src="images/moto-g96.jpg" alt="moto G96 5G" style="width:100%; height:250px; object-fit:contain; border-radius:10px; margin-bottom:15px;">
+        <article class="card">
 
-    <h3>moto G96 5G</h3>
+            <img
+                src="images/realme-p4x-5g.jpg"
+                alt="Realme P4x 5G"
+                class="phone-image"
+            >
 
-    <p>
-        Offers a high-refresh-rate display and a
-        clean Android experience for everyday use.
-    </p>
+            <div class="card-content">
 
-    <div class="price">Check Current Price</div>
+                <h3>Realme P4x 5G</h3>
 
-    <a class="button" href="https://link.amazon/B06rwHSkK" target="_blank" rel="nofollow sponsored">
-        Check Latest Price
-    </a>
+                <p class="description">
+                    Packs a large 7,000 mAh battery with smooth
+                    everyday performance and strong RAM options
+                    for multitasking.
+                </p>
 
-</div>
+                <ul class="features">
+                    <li>5G connectivity</li>
+                    <li>7,000 mAh battery</li>
+                    <li>Multiple RAM options</li>
+                    <li>Large display</li>
+                </ul>
+
+                <div class="price">
+                    Check Current Price
+                </div>
+
+                <p class="note">
+                    Price and offers can change frequently.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://link.amazon/B01xCPeMv"
+                    target="_blank"
+                    rel="nofollow sponsored"
+                >
+                    Check Latest Price
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- SAMSUNG A35 -->
+
+        <article class="card">
+
+            <img
+                src="images/samsung-galaxy-a35-5g.jpg"
+                alt="Samsung Galaxy A35 5G"
+                class="phone-image"
+            >
+
+            <div class="card-content">
+
+                <h3>Samsung Galaxy A35 5G</h3>
+
+                <p class="description">
+                    Focuses on a refined camera system, durable
+                    build quality and Samsung's software experience.
+                </p>
+
+                <ul class="features">
+                    <li>5G connectivity</li>
+                    <li>Multi-camera system</li>
+                    <li>Durable build</li>
+                    <li>Samsung software experience</li>
+                </ul>
+
+                <div class="price">
+                    Check Current Price
+                </div>
+
+                <p class="note">
+                    This model may be priced above ₹20,000.
+                    Verify the current price.
+                </p>
+
+                <a
+                    class="button"
+                    href="#"
+                    target="_blank"
+                    rel="nofollow sponsored"
+                >
+                    Check Latest Price
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- MOTO G96 -->
+
+        <article class="card">
+
+            <img
+                src="images/moto-g96-5g.jpg"
+                alt="moto G96 5G"
+                class="phone-image"
+            >
+
+            <div class="card-content">
+
+                <h3>moto G96 5G</h3>
+
+                <p class="description">
+                    Delivers a smooth high-refresh-rate display,
+                    clean near-stock Android and well-rounded
+                    everyday usability.
+                </p>
+
+                <ul class="features">
+                    <li>5G connectivity</li>
+                    <li>120Hz display</li>
+                    <li>Clean Android experience</li>
+                    <li>Smooth everyday performance</li>
+                </ul>
+
+                <div class="price">
+                    Check Current Price
+                </div>
+
+                <p class="note">
+                    This model may be priced above ₹20,000.
+                    Verify the current price.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://link.amazon/B06rwHSkK"
+                    target="_blank"
+                    rel="nofollow sponsored"
+                >
+                    Check Latest Price
+                </a>
+
+            </div>
+        </article>
 
     </div>
 
@@ -246,67 +448,96 @@
 
     <div class="grid">
 
-        <div class="card">
+        <div class="guide-card">
             <h3>Best 5G Phones in India</h3>
             <p>
                 Explore popular 5G smartphones across different
                 budgets and features.
             </p>
-            <a class="button" href="#">Read Guide</a>
         </div>
 
-        <div class="card">
+        <div class="guide-card">
             <h3>Best Camera Phones</h3>
             <p>
-                Compare smartphones for photography,
-                video and everyday camera use.
+                Find smartphones for photography, video and
+                everyday camera use.
             </p>
-            <a class="button" href="#">Read Guide</a>
         </div>
 
-        <div class="card">
+        <div class="guide-card">
             <h3>Best Battery Phones</h3>
             <p>
-                Find smartphones designed for long daily
+                Discover smartphones designed for long daily
                 battery life.
             </p>
-            <a class="button" href="#">Read Guide</a>
         </div>
 
     </div>
 
 
-    <h2 class="section-title" id="deals">
-        Latest Smartphone Deals
+    <h2 class="section-title" id="guides">
+        Smartphone Buying Guides
     </h2>
 
-    <div class="card">
-        <h3>Check Today's Smartphone Prices</h3>
+    <div class="grid">
 
-        <p>
-            Smartphone prices and offers can change frequently.
-            Check the latest price before purchasing.
-        </p>
+        <div class="guide-card">
+            <h3>How to Choose a Smartphone</h3>
+            <p>
+                Learn what to check before buying a new phone,
+                including processor, camera, battery and display.
+            </p>
+        </div>
 
-        <a class="button" href="#">
-            View Deals
-        </a>
+        <div class="guide-card">
+            <h3>Best Phones for Gaming</h3>
+            <p>
+                Compare important features such as performance,
+                display, cooling and battery.
+            </p>
+        </div>
+
+        <div class="guide-card">
+            <h3>Best Phones for Students</h3>
+            <p>
+                Find practical smartphones for study, social
+                media, entertainment and everyday use.
+            </p>
+        </div>
+
     </div>
 
-</div>
+
+    <div class="info-box">
+
+        <h3>Before You Buy</h3>
+
+        <p>
+            Smartphone prices, offers, specifications and
+            availability can change. Always check the current
+            product information and final price before purchasing.
+        </p>
+
+    </div>
+
+</main>
 
 
 <footer>
-    <p>© 2026 SmartPick India</p>
 
     <p>
-        Prices, specifications and availability may change.
-        Please verify the final price before purchasing.
+        © 2026 SmartPick India. All rights reserved.
     </p>
 
     <p>
-        Some links may be affiliate links.
+        Prices and availability may change without notice.
     </p>
+
+    <p>
+        Some links on this website may be affiliate links.
+        We may earn a commission from eligible purchases.
+    </p>
+
 </footer>
 
 </body>

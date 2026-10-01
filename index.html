@@ -1,221 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SmartPick India | Best Smartphones & Deals</title>
+<title>SmartPick India - Best Smartphones Under ₹20,000</title>
 
-    <meta name="description" content="Find the latest smartphones, prices, features, buying guides and deals in India.">
+<meta name="description" content="Discover popular smartphones, features, prices and deals in India.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 28px 15px;
-        }
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 6px;
-        }
+header h1 {
+    font-size: 32px;
+}
 
-        header p {
-            color: #d1d5db;
-            font-size: 15px;
-        }
+header p {
+    margin-top: 6px;
+    color: #d1d5db;
+}
 
-        nav {
-            background: white;
-            padding: 14px 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-        nav a {
-            color: #111827;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 8px;
-            font-size: 14px;
-        }
+nav a {
+    color: #111827;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 25px 15px;
-        }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 15px;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            color: white;
-            padding: 40px 25px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-        }
+.hero {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
 
-        .hero h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
-        .hero p {
-            font-size: 16px;
-            max-width: 700px;
-        }
+.section-title {
+    font-size: 25px;
+    margin: 30px 0 18px;
+}
 
-        .section-title {
-            font-size: 25px;
-            margin: 30px 0 18px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+}
 
-        .card {
-            background: white;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            padding-bottom: 20px;
-        }
+.phone-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    background: white;
+    padding: 15px;
+}
 
-        .phone-image {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            background: #ffffff;
-            padding: 15px;
-            display: block;
-        }
+.card-content {
+    padding: 18px;
+}
 
-        .card-content {
-            padding: 18px;
-        }
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #111827;
-        }
+.description {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
 
-        .description {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
+.features {
+    padding-left: 20px;
+    margin: 10px 0;
+    color: #444;
+    font-size: 14px;
+}
 
-        .features {
-            margin: 12px 0;
-            padding-left: 20px;
-            color: #444;
-            font-size: 14px;
-        }
+.price {
+    color: #16a34a;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 12px 0;
+}
 
-        .price {
-            color: #16a34a;
-            font-size: 21px;
-            font-weight: bold;
-            margin: 12px 0;
-        }
+.button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 11px 17px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
 
-        .note {
-            color: #777;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
+.guide {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
 
-        .button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 11px 17px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 8px;
-        }
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+    font-size: 13px;
+}
 
-        .button:hover {
-            background: #1d4ed8;
-        }
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
 
-        .guide-card {
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-        }
+    .hero h2 {
+        font-size: 25px;
+    }
 
-        .guide-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .info-box {
-            background: #fff;
-            border-left: 5px solid #2563eb;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 8px;
-        }
-
-        footer {
-            background: #111827;
-            color: #d1d5db;
-            text-align: center;
-            padding: 30px 15px;
-            margin-top: 40px;
-            font-size: 13px;
-        }
-
-        footer p {
-            margin: 6px 0;
-        }
-
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 27px;
-            }
-
-            .hero h2 {
-                font-size: 25px;
-            }
-
-            .hero {
-                padding: 30px 20px;
-            }
-
-            .phone-image {
-                height: 230px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 4px 5px;
-            }
-        }
-    </style>
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -227,316 +180,257 @@
 
 <nav>
     <a href="#">Home</a>
-    <a href="#under20k">Under ₹20K</a>
+    <a href="#phones">Phones</a>
     <a href="#5g">5G Phones</a>
     <a href="#guides">Buying Guides</a>
 </nav>
 
-<main class="container">
+<div class="container">
 
-    <section class="hero">
-        <h2>Find Your Next Smartphone</h2>
-        <p>
-            Discover popular smartphones, useful features,
-            buying guides and current deals for Indian buyers.
-        </p>
-    </section>
-
+<section class="hero">
+    <h2>Find Your Next Smartphone</h2>
+    <p>
+        Explore popular smartphones, features, prices and
+        buying guides for Indian buyers.
+    </p>
+</section>
 
-    <h2 class="section-title" id="under20k">
-        Top Smartphones Under ₹20,000
-    </h2>
+<h2 class="section-title" id="phones">
+Top Smartphones Under ₹20,000
+</h2>
 
-    <div class="grid">
+<div class="grid">
 
-        <!-- CMF PHONE -->
+<!-- CMF -->
 
-        <article class="card">
+<div class="card">
 
-            <img
-                src="images/cmf-phone-2-pro.jpg"
-                alt="CMF by Nothing Phone 2 Pro"
-                class="phone-image"
-            >
+<img src="cmf.jpg"
+     alt="CMF by Nothing Phone 2 Pro"
+     class="phone-image">
 
-            <div class="card-content">
+<div class="card-content">
 
-                <h3>CMF by Nothing Phone 2 Pro</h3>
+<h3>CMF by Nothing Phone 2 Pro</h3>
 
-                <p class="description">
-                    Features an optimized software experience
-                    running Android 15 with Nothing OS and a
-                    versatile triple-camera setup.
-                </p>
+<p class="description">
+Features an optimized software experience running
+Android 15 with Nothing OS and a versatile camera setup.
+</p>
 
-                <ul class="features">
-                    <li>Android 15 with Nothing OS</li>
-                    <li>Android 16 upgrade support</li>
-                    <li>Triple-camera setup</li>
-                    <li>Modern design</li>
-                </ul>
+<ul class="features">
+<li>Android 15</li>
+<li>Nothing OS</li>
+<li>Triple-camera setup</li>
+<li>Modern design</li>
+</ul>
 
-                <div class="price">₹18,999*</div>
+<div class="price">₹18,999*</div>
 
-                <p class="note">
-                    Price may change. Check the latest price before buying.
-                </p>
+<a class="button"
+   href="#"
+   target="_blank"
+   rel="nofollow sponsored">
+Check Latest Price
+</a>
 
-                <a
-                    class="button"
-                    href="#"
-                    target="_blank"
-                    rel="nofollow sponsored"
-                >
-                    Check Latest Price
-                </a>
+</div>
+</div>
 
-            </div>
-        </article>
 
+<!-- REALME -->
 
-        <!-- REALME P4X -->
+<div class="card">
 
-        <article class="card">
+<img src="realme.jpg"
+     alt="Realme P4x 5G"
+     class="phone-image">
 
-            <img
-                src="images/realme-p4x-5g.jpg"
-                alt="Realme P4x 5G"
-                class="phone-image"
-            >
+<div class="card-content">
 
-            <div class="card-content">
+<h3>Realme P4x 5G</h3>
 
-                <h3>Realme P4x 5G</h3>
+<p class="description">
+Packs a large 7,000 mAh battery for long daily use,
+paired with smooth everyday performance.
+</p>
 
-                <p class="description">
-                    Packs a large 7,000 mAh battery with smooth
-                    everyday performance and strong RAM options
-                    for multitasking.
-                </p>
+<ul class="features">
+<li>5G connectivity</li>
+<li>7,000 mAh battery</li>
+<li>Strong RAM options</li>
+<li>Large display</li>
+</ul>
 
-                <ul class="features">
-                    <li>5G connectivity</li>
-                    <li>7,000 mAh battery</li>
-                    <li>Multiple RAM options</li>
-                    <li>Large display</li>
-                </ul>
+<div class="price">
+Check Current Price
+</div>
 
-                <div class="price">
-                    Check Current Price
-                </div>
+<a class="button"
+   href="https://link.amazon/B01xCPeMv"
+   target="_blank"
+   rel="nofollow sponsored">
+Check Latest Price
+</a>
 
-                <p class="note">
-                    Price and offers can change frequently.
-                </p>
+</div>
+</div>
 
-                <a
-                    class="button"
-                    href="https://link.amazon/B01xCPeMv"
-                    target="_blank"
-                    rel="nofollow sponsored"
-                >
-                    Check Latest Price
-                </a>
-
-            </div>
-        </article>
-
 
-        <!-- SAMSUNG A35 -->
+<!-- SAMSUNG -->
 
-        <article class="card">
+<div class="card">
 
-            <img
-                src="images/samsung-galaxy-a35-5g.jpg"
-                alt="Samsung Galaxy A35 5G"
-                class="phone-image"
-            >
+<img src="samsung.jpg"
+     alt="Samsung Galaxy A35 5G"
+     class="phone-image">
 
-            <div class="card-content">
-
-                <h3>Samsung Galaxy A35 5G</h3>
+<div class="card-content">
 
-                <p class="description">
-                    Focuses on a refined camera system, durable
-                    build quality and Samsung's software experience.
-                </p>
-
-                <ul class="features">
-                    <li>5G connectivity</li>
-                    <li>Multi-camera system</li>
-                    <li>Durable build</li>
-                    <li>Samsung software experience</li>
-                </ul>
-
-                <div class="price">
-                    Check Current Price
-                </div>
-
-                <p class="note">
-                    This model may be priced above ₹20,000.
-                    Verify the current price.
-                </p>
-
-                <a
-                    class="button"
-                    href="#"
-                    target="_blank"
-                    rel="nofollow sponsored"
-                >
-                    Check Latest Price
-                </a>
-
-            </div>
-        </article>
-
-
-        <!-- MOTO G96 -->
-
-        <article class="card">
-
-            <img
-                src="images/moto-g96-5g.jpg"
-                alt="moto G96 5G"
-                class="phone-image"
-            >
-
-            <div class="card-content">
-
-                <h3>moto G96 5G</h3>
-
-                <p class="description">
-                    Delivers a smooth high-refresh-rate display,
-                    clean near-stock Android and well-rounded
-                    everyday usability.
-                </p>
-
-                <ul class="features">
-                    <li>5G connectivity</li>
-                    <li>120Hz display</li>
-                    <li>Clean Android experience</li>
-                    <li>Smooth everyday performance</li>
-                </ul>
-
-                <div class="price">
-                    Check Current Price
-                </div>
-
-                <p class="note">
-                    This model may be priced above ₹20,000.
-                    Verify the current price.
-                </p>
-
-                <a
-                    class="button"
-                    href="https://link.amazon/B06rwHSkK"
-                    target="_blank"
-                    rel="nofollow sponsored"
-                >
-                    Check Latest Price
-                </a>
-
-            </div>
-        </article>
-
-    </div>
-
-
-    <h2 class="section-title" id="5g">
-        Popular 5G Smartphone Guides
-    </h2>
-
-    <div class="grid">
-
-        <div class="guide-card">
-            <h3>Best 5G Phones in India</h3>
-            <p>
-                Explore popular 5G smartphones across different
-                budgets and features.
-            </p>
-        </div>
-
-        <div class="guide-card">
-            <h3>Best Camera Phones</h3>
-            <p>
-                Find smartphones for photography, video and
-                everyday camera use.
-            </p>
-        </div>
-
-        <div class="guide-card">
-            <h3>Best Battery Phones</h3>
-            <p>
-                Discover smartphones designed for long daily
-                battery life.
-            </p>
-        </div>
-
-    </div>
-
-
-    <h2 class="section-title" id="guides">
-        Smartphone Buying Guides
-    </h2>
-
-    <div class="grid">
-
-        <div class="guide-card">
-            <h3>How to Choose a Smartphone</h3>
-            <p>
-                Learn what to check before buying a new phone,
-                including processor, camera, battery and display.
-            </p>
-        </div>
-
-        <div class="guide-card">
-            <h3>Best Phones for Gaming</h3>
-            <p>
-                Compare important features such as performance,
-                display, cooling and battery.
-            </p>
-        </div>
-
-        <div class="guide-card">
-            <h3>Best Phones for Students</h3>
-            <p>
-                Find practical smartphones for study, social
-                media, entertainment and everyday use.
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="info-box">
-
-        <h3>Before You Buy</h3>
-
-        <p>
-            Smartphone prices, offers, specifications and
-            availability can change. Always check the current
-            product information and final price before purchasing.
-        </p>
-
-    </div>
-
-</main>
+<h3>Samsung Galaxy A35 5G</h3>
+
+<p class="description">
+Focuses on a refined camera system, durable build
+quality and Samsung's software experience.
+</p>
+
+<ul class="features">
+<li>5G connectivity</li>
+<li>Multi-camera system</li>
+<li>Durable build</li>
+<li>Samsung software</li>
+</ul>
+
+<div class="price">
+Check Current Price
+</div>
+
+<a class="button"
+   href="#"
+   target="_blank"
+   rel="nofollow sponsored">
+Check Latest Price
+</a>
+
+</div>
+</div>
+
+
+<!-- MOTO -->
+
+<div class="card">
+
+<img src="moto.jpg"
+     alt="moto G96 5G"
+     class="phone-image">
+
+<div class="card-content">
+
+<h3>moto G96 5G</h3>
+
+<p class="description">
+Delivers a smooth high-refresh-rate display,
+clean Android experience and everyday usability.
+</p>
+
+<ul class="features">
+<li>5G connectivity</li>
+<li>120Hz display</li>
+<li>Clean Android</li>
+<li>Smooth performance</li>
+</ul>
+
+<div class="price">
+Check Current Price
+</div>
+
+<a class="button"
+   href="https://link.amazon/B06rwHSkK"
+   target="_blank"
+   rel="nofollow sponsored">
+Check Latest Price
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+<h2 class="section-title" id="5g">
+Popular 5G Smartphone Guides
+</h2>
+
+<div class="grid">
+
+<div class="guide">
+<h3>Best 5G Phones in India</h3>
+<p>
+Explore popular 5G smartphones across different budgets.
+</p>
+</div>
+
+<div class="guide">
+<h3>Best Camera Phones</h3>
+<p>
+Discover smartphones for photography and video.
+</p>
+</div>
+
+<div class="guide">
+<h3>Best Battery Phones</h3>
+<p>
+Find smartphones designed for long battery life.
+</p>
+</div>
+
+</div>
+
+
+<h2 class="section-title" id="guides">
+Smartphone Buying Guides
+</h2>
+
+<div class="grid">
+
+<div class="guide">
+<h3>How to Choose a Smartphone</h3>
+<p>
+Learn what to check before buying a new smartphone.
+</p>
+</div>
+
+<div class="guide">
+<h3>Best Phones for Gaming</h3>
+<p>
+Compare performance, display and battery features.
+</p>
+</div>
+
+<div class="guide">
+<h3>Best Phones for Students</h3>
+<p>
+Practical smartphones for study and everyday use.
+</p>
+</div>
+
+</div>
+
+</div>
 
 
 <footer>
 
-    <p>
-        © 2026 SmartPick India. All rights reserved.
-    </p>
+<p>© 2026 SmartPick India</p>
 
-    <p>
-        Prices and availability may change without notice.
-    </p>
+<p>
+Prices, specifications and availability may change.
+</p>
 
-    <p>
-        Some links on this website may be affiliate links.
-        We may earn a commission from eligible purchases.
-    </p>
+<p>
+Some links may be affiliate links.
+We may earn a commission from eligible purchases.
+</p>
 
 </footer>
 
